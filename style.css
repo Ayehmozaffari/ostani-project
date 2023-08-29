@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    background-color: #efe9e967;
+}
+#container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.basket{
+    margin-left: 500px;
+    vertical-align: middle;
+}
+.logo{
+    text-align: left;
+    vertical-align: middle;
+    
+}
+.first-section{
+    background-color: #F7DE1F;
+    position: absolute;
+    
+    padding-left: 100px;
+    padding-right: 80px;
+    padding-bottom:100px ;
+    right: 0%;
+    left: 0%;
+}
+.first-section h2{
+    text-align: center;
+    padding-top: 60px;
+}
+.first-section p{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+.first-section input{
+    font-family:'Rubik', sans-serif;
+    text-align: right;
+    align-items: right;
+    margin-top: 20px;
+    border: none;
+    padding: 15px 15px 20px 90px;
+    border-radius: 3px;
+    background: none;
+    margin-left: 100px;
+    outline: none;
+    width: 250px;
+}
+.search-input img{
+    width: 26px;
+    vertical-align: middle;
+}
+.search-input{
+    background-color: aliceblue;
+    vertical-align: middle;
+    padding: 10px 0px 17px 10px;
+    border-radius: 3px;
+    border: 0.25px solid #c3bfbf;
+}
+.second-section{
+    margin-top: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(60deg,#F7DE1F,#f71f1f);
+    position: absolute;
+    right: 0%;
+    left: 0%;
+}
+.clock-text p{
+  text-align: center;
+  margin-left: 500px;
+  font-size: 12px;
+  margin-top: 50px;
+  color: #ffffff;
+
+}
+.clock-logo img{
+    width: 40px;
+    height: 40px;
+    
+    text-align: center;
+    
+    margin-top: -270px;
+    margin-bottom: 30px;
+    margin-right: -270px;
+}
+.dart-text p{
+    text-align: center;
+    font-size: 12px;
+    margin-top: -70px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.dart-logo img{
+    text-align: center;
+    float: center;
+    width: 40px;
+    height: 40px;
+    margin-top: -190px;
+    margin-bottom: 40px;
+    margin-right: 200px;
+}
+.lamp-text p{
+    text-align: center;
+    font-size: 12px;
+    float: left;
+   margin-left: 440px;
+    margin-top:-55px;
+    color: #fff;
+}
+.lamp-logo img{
+    float: left;
+    margin-top: -60px;
+   margin-left: 400px;
+}
+.last-section h1{
+    margin-top: 500px;
+}
+.first-banner img{
+    float: left;
+    margin-left: -350px;
+}
+.javascript-course {
+
+padding:40px 50px 60px 60px 80px ;
+}
+.javascript-course h3{
+    text-align: left;
+    margin-left: 190px;
+    padding-top: -200px;
+   
+}
+.javascript-course p{
+  margin-right:200px ;
+  font-size: 13px;
+}
+.first-banner img{
+    margin-top: -90px;
+    margin-bottom: -130px;
+}
+.rates{
+    margin-right:200px ;
+    text-align: left;
+}
+.shopping-btn{
+    background: #1eded8;
+    border: none;
+    font-family: 'Rubik', sans-serif ;
+    color: #fff;
+    padding: 10px 100px 10px 100px;
+    border-radius: 2px;
+    text-align: left;
+    margin-left: -350px;
+    margin-top: 10px;
+}
