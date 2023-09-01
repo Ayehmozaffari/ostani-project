@@ -2,18 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
-    display: flex;
-    flex-direction: column;
+
     text-align: center;
     justify-content: center;
     align-items: center;
     font-family: 'Rubik', sans-serif;
     background-color: #efe9e967;
+   
+    /* grid-template-columns: auto 150px auto 150px; */
 }
 #container{
     text-align: center;
     justify-content: center;
     align-items: center;
+
 }
 .menu{
     
@@ -72,63 +74,105 @@ body{
     padding: 10px 0px 17px 10px;
     border-radius: 3px;
     border: 0.25px solid #c3bfbf;
+    
 }
 .second-section{
     margin-top: 300px;
+    /* margin: 0;
+height: 10vh;
+display: grid;
+
+place-items: center;
+    margin-top: 300px;
+    text-align: center;
     align-items: center;
     justify-content: center;
     text-align: center;
     background: linear-gradient(60deg,#F7DE1F,#f71f1f);
     position: absolute;
     right: 0%;
-    left: 0%;
-}
+    left: 0%; */
+    background: linear-gradient(60deg,#F7DE1F,#f71f1f);
+    color:#fff;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   }
+
 .clock-text p{
-  text-align: center;
+  /* text-align: center;
   margin-left: 500px;
   font-size: 12px;
-  margin-top: 50px;
-  color: #ffffff;
-
+  margin-top: 50px;*/
+  color: #ffffff; 
+ font-size: 12px;
+ float: right;
+ margin-right:-450px ;
+ margin-top: 50px;
 }
 .clock-logo img{
-    width: 40px;
+    /* width: 40px;
     height: 40px;
     
     text-align: center;
     
     margin-top: -270px;
     margin-bottom: 30px;
-    margin-right: -270px;
+    margin-right: -270px; */
+    margin-top: 50px;
+    width: 40px;
+    height: 40px;
+    margin-right:-600px ;
 }
 .dart-text p{
-    text-align: center;
+    /* text-align: center;
     font-size: 12px;
     margin-top: -70px;
     margin-bottom: 30px;
-    color: #fff;
+    color: #fff; */
+    font-size: 12px;
+    margin-left: 80px;
+    margin-top: 40px;
 }
 .dart-logo img{
-    text-align: center;
+    /* text-align: center;
     float: center;
     width: 40px;
     height: 40px;
-    margin-top: -190px;
+    /* margin-top: -190px;
     margin-bottom: 40px;
-    margin-right: 200px;
+    margin-right: 200px; */
+    margin-left: -400px; 
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
 }
 .lamp-text p{
-    text-align: center;
+    /* text-align: left;
     font-size: 12px;
+    float: left; */
+   /* margin-left: 440px;
+    margin-top:-55px; */
+    /* color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center; */
     float: left;
-   margin-left: 440px;
-    margin-top:-55px;
-    color: #fff;
+    margin-left: -400px;
+    margin-top: 50px;
+    font-size: 12px;
+    
 }
 .lamp-logo img{
-    float: left;
-    margin-top: -60px;
-   margin-left: 400px;
+    /* float: left; */
+    /* margin-top: -60px;
+   margin-left: 100px; */
+   margin-top: -50px;
+   margin-bottom: 30px;  
+   margin-left: -380px;
+
 }
 .last-section h1{
     margin-top: 500px;
@@ -138,25 +182,28 @@ body{
     margin-left: -350px;
 }
 .javascript-course {
-
-padding:40px 50px 60px 60px 80px ;
+   background-color: #fff;
+   margin-left: 200px;
+   border: 0.25px solid rgb(199, 199, 199);
+   
 }
 .javascript-course h3{
     text-align: left;
-    margin-left: 190px;
-    padding-top: -200px;
-   
+    margin-right: 700px;
+    padding-top: -300px;
+   margin-left: 220px;
 }
 .javascript-course p{
-  margin-right:200px ;
+  margin-right:500px ;
   font-size: 13px;
+  font-weight: 500;
 }
 .first-banner img{
     margin-top: -90px;
     margin-bottom: -130px;
 }
 .rates{
-    margin-right:200px ;
+    margin-right:500px ;
     text-align: left;
 }
 .shopping-btn{
@@ -167,6 +214,17 @@ padding:40px 50px 60px 60px 80px ;
     padding: 10px 100px 10px 100px;
     border-radius: 2px;
     text-align: left;
-    margin-left: -350px;
+    margin-left: -640px;
     margin-top: 10px;
+}
+.amalgar-course{
+    text-align: right;
+}
+.banner2 img{
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+    margin-left: 30px;
+    margin-top: -600px;
+    margin-bottom: 200px;
 }
