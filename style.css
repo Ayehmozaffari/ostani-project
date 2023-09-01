@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* * {
+    box-sizing: border-box;
+  } */
 body{
 
     text-align: center;
@@ -57,25 +59,43 @@ body{
     align-items: right;
     margin-top: 20px;
     border: none;
-    padding: 15px 15px 20px 90px;
+    
     border-radius: 3px;
     background: none;
     margin-left: 100px;
     outline: none;
     width: 250px;
-}
-.search-input img{
+    background-image: url('icons8-search-24.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    background-color: white;
+
+    background-position: 10px 10px; 
+   ;padding: 10px 0px 17px 300px;
+    padding: 15px 30px 12px 200px;
+    margin-right: 100px;
+    border: 0.25px solid #c3bfbf;
+  }
+  .first-section:hover{
+    cursor:url(icons8-js-48.png) ,auto;
+    transition: 1004s;
+    background: url(output-onlinegiftools.gif);
+    background-repeat:repeat-x;
+    transition: 1004s;
+  }
+/* .search-input img{
     width: 26px;
     vertical-align: middle;
-}
-.search-input{
+}*/
+/* .search-input{
     background-color: aliceblue;
     vertical-align: middle;
     padding: 10px 0px 17px 10px;
     border-radius: 3px;
     border: 0.25px solid #c3bfbf;
     
-}
+}  */
 .second-section{
     margin-top: 300px;
     /* margin: 0;
@@ -175,23 +195,31 @@ place-items: center;
 
 }
 .last-section h1{
-    margin-top: 500px;
+    margin-top: 100px;
 }
 .first-banner img{
     float: left;
     margin-left: -350px;
 }
 .javascript-course {
-   background-color: #fff;
-   margin-left: 200px;
-   border: 0.25px solid rgb(199, 199, 199);
+
+   
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   
    
 }
 .javascript-course h3{
-    text-align: left;
-    margin-right: 700px;
+    text-align: center;
+    /* margin-right: 700px;
     padding-top: -300px;
-   margin-left: 220px;
+   margin-left: 220px; */
+  
+}
+.description h3 p{
+    background:#fff ;
+    padding: 10px -100px 10px 100px ;
 }
 .javascript-course p{
   margin-right:500px ;
