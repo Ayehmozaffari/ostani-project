@@ -225,6 +225,7 @@ place-items: center;
     padding-right:30px ;
     margin-top: -170px;
     padding-left: 100px;
+    padding-bottom: 20px;
 }
 /* .javascript-course { */
 
@@ -263,19 +264,20 @@ place-items: center;
 .rates{
     margin-right:500px ;
     text-align: left;
-}
+}*/
 .shopping-btn{
     background: #1eded8;
     border: none;
     font-family: 'Rubik', sans-serif ;
     color: #fff;
-    padding: 10px 100px 10px 100px;
+    padding: 10px 80px 10px 80px;
     border-radius: 2px;
     text-align: left;
     margin-left: -640px;
+    margin-right: -10px;
     margin-top: 10px;
 }
-.amalgar-course{
+/*.amalgar-course{
     text-align: right;
 }
 .banner2 img{
