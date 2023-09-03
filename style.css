@@ -12,12 +12,13 @@ body{
     background-color: #efe9e967;
    
     /* grid-template-columns: auto 150px auto 150px; */
+   
 }
 #container{
     text-align: center;
     justify-content: center;
     align-items: center;
-
+    
 }
 .menu{
     
@@ -156,6 +157,11 @@ place-items: center;
     margin-left: 80px;
     margin-top: 40px;
 }
+.second-section:hover{
+    background: url(tumblr_10dfd11d1ff1583583b3ec08efb96ef7_d529e39b_1280.gif);
+    background-repeat:repeat-x;
+    transition: 1004s;
+}
 .dart-logo img{
     /* text-align: center;
     float: center;
@@ -194,34 +200,46 @@ place-items: center;
    margin-left: -380px;
 
 }
+.last-section{
+
+    display: grid;
+    place-items: center;
+}
 .last-section h1{
     margin-top: 100px;
 }
 .first-banner img{
-    float: left;
-    margin-left: -350px;
+    /* margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center; */
 }
 .javascript-course {
 
-   
+  
    text-align: center;
    justify-content: center;
-   align-items: center;
-   
-   
+   align-items: center; 
+   margin-right: 400px;
+   /* margin: 5px;
+   border: 1px solid #ccc;
+   float: left;
+   width: 180px;
+   text-align: center; */
 }
+
 .javascript-course h3{
     text-align: center;
-    /* margin-right: 700px;
+     margin-right: 700px;
     padding-top: -300px;
-   margin-left: 220px; */
-  
+   margin-left: 220px; 
 }
-.description h3 p{
+
+/* .description h3 p{
     background:#fff ;
     padding: 10px -100px 10px 100px ;
-}
-.javascript-course p{
+} */
+/* .javascript-course p{
   margin-right:500px ;
   font-size: 13px;
   font-weight: 500;
