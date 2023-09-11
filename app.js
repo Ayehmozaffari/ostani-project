@@ -1,18 +1,18 @@
-// document.querySelector('.shopping-btn').addEventListener('Click' , validation)
-// document.querySelector('.shopping-btn1').addEventListener('Click' , validation)
-// document.querySelector('.shopping-btn2').addEventListener('Click' , validation)
-// document.querySelector('.shopping-btn3').addEventListener('Click' , validation)
-// function validation(e){
-//   if(e.target.Click){
-//     alert("you have to select product");
-//   }
-// }
-// JOBS
-// اضافه کردن نوت جدید به لیست نوت ها
-// ذخیره کردن نوت جدید در حافظه
-// حذف کردن نوت مورد نظر از لیست
-// حذف کردن نوت مورد نظر از حافظه
-// لود کردن نوت ها در زمان باز شدن صفحه
+// // // document.querySelector('.shopping-btn').addEventListener('Click' , validation)
+// // // document.querySelector('.shopping-btn1').addEventListener('Click' , validation)
+// // // document.querySelector('.shopping-btn2').addEventListener('Click' , validation)
+// // // document.querySelector('.shopping-btn3').addEventListener('Click' , validation)
+// // // function validation(e){
+// // //   if(e.target.Click){
+// // //     alert("you have to select product");
+// // //   }
+// // // }
+// // // JOBS
+// // // اضافه کردن نوت جدید به لیست نوت ها
+// // // ذخیره کردن نوت جدید در حافظه
+// // // حذف کردن نوت مورد نظر از لیست
+// // // حذف کردن نوت مورد نظر از حافظه
+// // // لود کردن نوت ها در زمان باز شدن صفحه
 
 const note = document.querySelector('.shopping-btn')
 const note1 = document.querySelector('.shopping-btn1')
@@ -154,3 +154,28 @@ function saveNotesInLS(notes) {
 }
 
 
+// document.querySelector('.shopping-btn').onclick = function(){
+//     if(document.querySelector('.dropdown-content').value.length == 0){
+//         alert("Kindly Enter Task Name!!!!")
+//     }
+
+//     else{
+//         document.querySelector('#tasks').innerHTML += `
+//             <div class="task">
+//                 <li>
+//                     ${document.querySelector('.dropdown-content').value}
+//                 </li>
+//                 <button class="delete">
+//                     <i class="far fa-trash-alt"></i>
+//                 </button>
+//             </div>
+//         `;
+
+//         var current_tasks = document.querySelectorAll(".delete");
+//         for(var i=0; i<current_tasks.length; i++){
+//             current_tasks[i].onclick = function(){
+//                 this.parentNode.remove();
+//             }
+//         }
+//     }
+// }
