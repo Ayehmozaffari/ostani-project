@@ -1,236 +1,86 @@
-// // // // document.querySelector('.shopping-btn').addEventListener('Click' , validation)
-// // // // document.querySelector('.shopping-btn1').addEventListener('Click' , validation)
-// // // // document.querySelector('.shopping-btn2').addEventListener('Click' , validation)
-// // // // document.querySelector('.shopping-btn3').addEventListener('Click' , validation)
-// // // // function validation(e){
-// // // //   if(e.target.Click){
-// // // //     alert("you have to select product");
-// // // //   }
-// // // // }
-// // // // JOBS
-// // // // اضافه کردن نوت جدید به لیست نوت ها
-// // // // ذخیره کردن نوت جدید در حافظه
-// // // // حذف کردن نوت مورد نظر از لیست
-// // // // حذف کردن نوت مورد نظر از حافظه
-// // // // لود کردن نوت ها در زمان باز شدن صفحه
+var inputEl = document.getElementById('input-field');
+var colorsEl = document.getElementsByClassName('color-box');
+var btnSaveEl = document.getElementById('btn-save');
+var btnDeleteEl = document.getElementById('btn-delete');
+var listEl = document.getElementById('listed');
 
-// const note = document.querySelector('.shopping-btn')
-// const newNoteForm = document.querySelector('.dropdown')
-// const noteList = document.querySelector('.basket')
-// const removeBtns = document.querySelector('.removeBtn')
+var noteCount = 0;
+var activeNote = null;
 
-// // events
-// // Submit New note event
-// newNoteForm.addEventListener('submit', addNewNote)
+for (var i = 0; i < colorsEl.length; i++) {
+  var color = convertColor(colorsEl[i].style.backgroundColor);
+  colorsEl[i].setAttribute('onclick', 'inputColor("' + color + '")');
+}
 
-// // remove Note event
-// noteList.addEventListener('click', removeNote)
+function convertColor(color) {
+  var result = w3color(color.toLowerCase());
+  return result.valid ? result.toHexString() : '';
+}
 
-// // load all notes
-// document.addEventListener('DOMContentLoaded', loadNotesInPage)
+function inputColor(color) {
+  inputEl.style.backgroundColor = color;
+}
 
-
-// // Templates
-// // note Template
-// function noteTemplate(noteText, noteID) {
-//     return `
-//         <li data-id='${noteID}'>
-//             <span>${noteText}</span>
-//             <span class='removeBtn'>❌</span>
-//         </li>
-//     `
-// }
-
-// // functions
-// // Load Notes on Page Load 
-// function loadNotesInPage() {
-//     // STEP 1 :  Load All Notes from LS
-//     let LSNotes = loadOfLS()
-
-//     // STEP 2 : Add Notes on Page
-//     LSNotes.forEach(
-//         function (eachNote) {
-//             addNoteInList(eachNote.noteText, eachNote.noteID)
-//         }
-//     )
-// }
-
-// // add note in noteList
-// function addNoteInList(noteText, noteID) {
-//     noteList
-//         .insertAdjacentHTML
-//         (
-//             'afterbegin',
-//             noteTemplate(noteText, noteID)
-//         )
-// }
-
-
-// // add new note and add in noteList
-// function addNewNote(event) {
-//     // Add new note to noteList 
-//     event.preventDefault()
-//     let noteText = note.value
-//     let noteID = Math.random().toFixed(5)
-
-//     // Add note in NoteList
-//     addNoteInList(noteText, noteID)
-
-//     // save new note in LocalStorage
-//     addNoteinLS(noteText, noteID)
-
-//     // clear form
-//     newNoteForm.reset()
-// }
-
-
-// // Remove note function
-// function removeNote(event) {
-//     // STEP1: remove note from note List
-//     if (event.target.classList.contains('removeBtn')) {
-//         event.target.parentElement.remove()
-
-
-//         // STEP2: remove note from Local Storage
-//         let noteRID = event.target.parentElement.getAttribute('data-id')
-
-//         removeNoteFromLS(noteRID)
-//     }
-// }
-
-// function removeNoteFromLS(noteRID) {
-//     // 1. Load LS NOTES
-//     let LSNotes = loadOfLS()
-
-//     // 2. Hazf az Araayehe Load SHode
-//     LSNotes.forEach(
-//         function (eachNote, eachIndex) {
-//             if (noteRID == eachNote.noteID) {
-//                 LSNotes.splice(eachIndex, 1)
-//             }
-//         })
-
-//     // 3. Zakhire Kardane Araye Jadid dar Local Storage
-//     saveNotesInLS(LSNotes)
-// }
-
-
-// // save note in local storage
-// function addNoteinLS(note, noteID) {
-//     // 1. Load LS NOTES
-//     let LSNotes = loadOfLS()
-
-//     // 2. Add new Note 
-//     LSNotes.push({ noteText: note, noteID: noteID })
-
-//     // 3. Save NOTES in LS
-//     saveNotesInLS(LSNotes)
-// }
-
-
-// // load notes from localstorage
-// function loadOfLS() {
-//     // 1. Load LS NOTES
-//     let LSNotes = JSON.parse(localStorage.getItem('notes'))
-
-//     if (LSNotes == null) {
-//         localStorage.setItem('notes', '[]')
-//         LSNotes = JSON.parse(localStorage.getItem('notes'))
-//     }
-
-//     return LSNotes
-// }
-
-// // save all Notes in Local storage
-// function saveNotesInLS(notes) {
-//     // 3. Save NOTES in LS
-//     let LSNotes = notes
-
-//     LSNotes = JSON.stringify(LSNotes)
-//     localStorage.setItem('notes', LSNotes)
-// }
-
-
-// // document.querySelector('.shopping-btn').onclick = function(){
-// //     if(document.querySelector('.dropdown-content').value.length == 0){
-// //         alert("Kindly Enter Task Name!!!!")
-// //     }
-
-// //     else{
-// //         document.querySelector('#tasks').innerHTML += `
-// //             <div class="task">
-// //                 <li>
-// //                     ${document.querySelector('.dropdown-content').value}
-// //                 </li>
-// //                 <button class="delete">
-// //                     <i class="far fa-trash-alt"></i>
-// //                 </button>
-// //             </div>
-// //         `;
-
-// //         var current_tasks = document.querySelectorAll(".delete");
-// //         for(var i=0; i<current_tasks.length; i++){
-// //             current_tasks[i].onclick = function(){
-// //                 this.parentNode.remove();
-// //             }
-// //         }
-// //     }
-// // }
-// document.addEventListener("click", function(){
-//     document.body.style.backgroundColor = "#F9E795";
-//   });
-//   window.addEventListener("click", myFunction);
-
-// function myFunction() {
-//   document.getElementsByClassName("dropdown-content").innerHTML = Math.random();
-// }
-
-// function shoppingbtn() {
-//   window.removeEventListener("click", myFunction);
-// }
-// let language = window.navigator.language;
-// document.getElementById("demo").innerHTML = "زبان مرورگر: " + language;
-
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
+inputEl.onkeypress = function (event) {
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if (keycode == '13') {
+    btnSaveEl.onclick();
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
+btnSaveEl.onclick = function () {
+  var text = inputEl.value;
+  if (text === '') {
+    alert('Please write a note.');
+    return;
   }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
+  var id = noteCount + 1;
+  var color = inputEl.style.backgroundColor;
+  if (activeNote) {
+    document.querySelector('#listed div[id=note' + activeNote + ']').style.backgroundColor = color;
+    document.querySelector('#listed div[id=note' + activeNote + '] p').textContent = text;
+    document.getElementById("btn-icon").classList.remove("fa-remove");
+    document.getElementById("btn-icon").classList.add("fa-eraser");
+    activeNote = null;
   } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
+    var textEl = document.createElement('p');
+    textEl.setAttribute('class', 'card-text p-3');
+    textEl.appendChild(document.createTextNode(text));
+    var containerEl = document.createElement('div');
+    containerEl.setAttribute('id', 'note' + id);
+    containerEl.setAttribute('class', 'card shadow-sm rounded');
+    containerEl.setAttribute('onclick', 'editNote(' + id + ')');
+    containerEl.style.backgroundColor = color || '#fff';
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+    containerEl.appendChild(textEl);
+    listEl.appendChild(containerEl);
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
+    noteCount++;
   }
+
+  inputEl.value = '';
+  inputEl.style.backgroundColor = '#fff';
+}
+
+function editNote(id) {
+  var itemEl = document.getElementById('note' + id);
+  var textItem = itemEl.querySelector('p').textContent;
+  activeNote = id;
+  inputEl.value = textItem;
+  inputEl.style.backgroundColor = itemEl.style.backgroundColor;
+
+  document.getElementById("btn-icon").classList.remove("fa-eraser");
+  document.getElementById("btn-icon").classList.add("fa-remove");
+}
+
+btnDeleteEl.onclick = function () {
+  if (activeNote) {
+    var note = listEl.querySelector('div[id=note' + activeNote + ']');
+    note.remove();
+    activeNote = null;
+  }
+  inputEl.value = '';
+  inputEl.style.backgroundColor = '#fff';
+  document.getElementById("btn-icon").classList.remove("fa-remove");
+  document.getElementById("btn-icon").classList.add("fa-eraser");
 }
