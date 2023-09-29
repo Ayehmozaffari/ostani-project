@@ -3,6 +3,9 @@
 /* * {
     box-sizing: border-box;
   } */
+  * {
+    box-sizing: border-box;
+  }
 body{
 
     text-align: center;
@@ -487,6 +490,21 @@ footer{
   }
   @media only screen and (max-width: 600px) {
     body {
-      background-color: lightblue;
+      background: url(sky-gif.gif);
+      background-size: cover;
+      background-repeat: no-repeat;
     }
+  }
+
+
+  
+  @media screen and (min-width: 600px){
+    body {
+      font-size: 12px;
+      
+    }
+    .search-input{
+        padding: 10px 11px 12px 13px;
+    }
+    .amalgar-course{}
   }
